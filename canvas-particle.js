@@ -49,14 +49,13 @@ var CanvasParticle = (function(){
 			canvasSize(canvas.element);
 		}
 		body.onmousemove = function(e){
-			var event = window.event || e;
+			var event = e || window.event;
 			canvas.mouse = {
 				x: event.clientX,
 				y: event.clientY
 			}
 		}
 		document.onmouseleave = function(){
-			body.onmousemove = null;
 			canvas.mouse = undefined;
 		}
 		setInterval(function(){

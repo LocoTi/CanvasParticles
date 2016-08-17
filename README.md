@@ -27,3 +27,6 @@ window.onload = function(){
 	CanvasParticle(config);
 }
 </pre>
+##效果图
+可以将js文件放入Tampermonkey作为脚本执行，看百度首页的效果图如下<br>
+![效果图](https://github.com/LocoTi/CanvasParticles/blob/master/PutInTampermonkey.png "插件效果图")
