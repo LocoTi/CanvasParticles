@@ -153,9 +153,9 @@ var CanvasParticle = (function(){
 					canvas.points[i].x = canvas.points[i].x + (mouse.x - canvas.points[i].x) / 20;
 					canvas.points[i].y = canvas.points[i].y + (mouse.y - canvas.points[i].y) / 20;
 				}
-				if(dist <= canvas.config.dist){
+				if(dist <= canvas.config.e_dist){
 					context.lineWidth = 1;
-					context.strokeStyle = "rgba("+ canvas.config.stroke + ","+ (1 - dist / canvas.config.dist) +")";
+					context.strokeStyle = "rgba("+ canvas.config.stroke + ","+ (1 - dist / canvas.config.e_dist) +")";
 					context.beginPath();
 					context.moveTo(canvas.points[i].x, canvas.points[i].y);
 					context.lineTo(mouse.x, mouse.y);
