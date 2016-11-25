@@ -10,7 +10,6 @@ var CanvasParticle = (function(){
 		canvasConfig = canvasConfig || {};
 		var html = getElementByTag("html")[0];
 		var body = getElementByTag("body")[0];
-		var canvasDiv = getELementById("canvas-particle");
 		var canvasObj = document.createElement("canvas");
 
 		var canvas = {
@@ -43,7 +42,7 @@ var CanvasParticle = (function(){
 		// body.replaceChild(canvas.element, canvasDiv);
 		body.appendChild(canvas.element);
 
-		canvas.element.style = "position: absolute; top: 0; left: 0; z-index: -1;";
+		canvas.element.style = "position: fixed; top: 0; left: 0; z-index: -1;";
 		canvasSize(canvas.element);
 		window.onresize = function(){
 			canvasSize(canvas.element);
